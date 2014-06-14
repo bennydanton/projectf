@@ -1,0 +1,21 @@
+<div class="center">
+  <div class="row">
+    <% @treats.each do |treat| %>
+      <div class="col-md-6">
+        <div class="thumbnail">
+          <div class="caption">
+            <h3><%= number_to_currency(treat.amount) %></h3><br>
+             <h4><%= treat.message %></h4>
+           <%= link_to 'Show', treat, class: "btn btn-link" %>
+            <%= link_to 'Edit', edit_treat_path(treat), class: "btn btn-link" %>
+            <%= link_to 'Destroy', treat, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %>
+          </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<br>
+
+<%= link_to 'New Treat', new_treat_path, class: "btn btn-link" %>

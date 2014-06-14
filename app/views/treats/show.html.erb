@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+<div class="center">
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-6">
+			<div class="thumbnail">
+				<div class="caption">
+					<h3>Amount: <%= number_to_currency(@treat.amount) %></h3>
+					<p><%= @treat.message %></p>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3"></div>
+	</div>
+</div>
+
+<%= link_to 'Edit', edit_treat_path(@treat), class: "btn btn-link" %> |
+<%= link_to 'Back', treats_path, class: "btn btn-link" %>
