@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140614105730) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "treats", force: true do |t|
     t.decimal  "amount"
     t.text     "message"
